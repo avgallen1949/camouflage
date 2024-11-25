@@ -1,0 +1,122 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+/* Container that holds both columns */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Left column (20% width) */
+.left-column {
+  width: 20%;
+  padding: 20px;
+}
+
+.left-column img.top-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Right column (80% width) */
+.right-column {
+  width: 80%;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px; /* 10px gap between each image */
+  align-items: center; /* Align images to the top of each column */
+}
+
+.image-grid img {
+  width: 100%;
+  max-height: 10rem;
+  display: block;
+}
+
+.popup {
+  display: none;  /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;  /* White background */
+  padding: 50px;
+  border: 2px solid hotpink;  /* 2px hot pink border */
+  border-radius: 8px;
+  z-index: 9999;
+  max-width: 80%;
+  max-height: 80%;
+  color: hotpink;
+  text-align: center;
+  font-size: 18px;
+}
+
+.clickImage:hover {
+  cursor: pointer;
+}
+
+/* Close button style */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: hotpink;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+  background-color: darkpink;  /* Darker pink when hovering */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  }
+}
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my website</title>
+    <link rel="stylesheet" href="./resources/index.css">
+</head>
+<body>
+<div class="container">
+<div class="left-column">
+  <img src="./resources/welcome.gif">
+  <br><br><br><br>
+  <p>I love bugs (especially jewel beetles), bioluminescent sea creatures, and all things glittery and iridescent.<br><br>I made this collection of gifs of all the things I love. You can click on some of them to learn more about why I love them!</p>
+</div>
+<div class="right-column">
+<div class="image-grid">
+<img src="./resources/3.png">
+<img src="./resources/18.png">
+<img src="./resources/800px-Jewel_beetle_Chrysochroa_fulminans_Mindanao_Philippines_08-85374013.jpg">
+<img src="./resources/45.gif" alt="Image 3" class="clickImage" data-message="I do love glitter! I love its reflective qualities and how dynamic it is in the light.">
+<img src="./resources/0de6a754b99833eb1cf0cda11c909ba9-1687801947.png">
+<img src="./resources/4d68b14dc3c55105a4a9687a7e9521e2cc565f83-2137565603.gif">
+<img src="./resources/iridescent-beetle-perched-stockcake.jpg" alt="Image 2" class="clickImage" data-message="Fun Fact! Iridescent beetles’ shiny protective shells are counterintuitive. Rather than functioning to illuminate them, they are a form of camouflage. When beetles sit on the semi-glossy surface of leaves, they miraculously blend in. Their iridescence adds depth and realism, concealing them from predators. ">
+<img src="./resources/sparkles.gif">
+<img src="./resources/9bfae7e589b958f516d7ea210d5a2c70-3954711450.gif">
+<img src="./resources/animfish.gif">
+<img src="./resources/green-iridescent-background-futuristic-neon-colors-metallic-holographic-spectrum-texture-abstract-gradient-rainbow-colorful-306538140.webp" alt="Image 4" class="clickImage" data-message="My favorite color is green. I love how irididescent materials are reflective like glitter. They hold so much dimension.">
+<img src="./resources/6874f35fae37aa9e785b2d69e7da7906-3353031456.gif">
+<img src="./resources/fish.gif">
+<img src="./resources/tumblr_okc7wyYrW51twd8ddo1_500-1589609048.gif">
+<img src="./resources/fishspin.gif">
+<img src="./resources/giphy-downsized-large-2101709629.gif">
+<img src="./resources/source-1385243223.gif">
+<img src="./resources/Counterillumination_squid_480x480.webp" alt="Image 3" class="clickImage" data-message="Some sea animals use a technique called counter-illumination to hide themselves. This also seems counterintuitive, as creatures emit bioluminescent light they brighten their body in the depths of the dark ocean. But they do so in order to blend in with their surroundings, particularly from below, mimicking the light-filled ocean above them.">
+<img src="./resources/glitter.gif">
+<img src="./resources/IMGP3180W-MOTION-3793144397.gif">
+<img src="./resources/pinkgirly.gif">
+<img src="./resources/tumblr_5cd63c3f9544a3d53d89d8f1ecdc6a10_272ecdf8_1280.gif">
+<img src="./resources/shinybutt.gif">
+  <img src="./resources/giphy-4166096860.gif">
+  <img src="./resources/sparkletreasurechest.gif">
+  <img src="./resources/tumblr_inline_owykhuPdsg1uqwco6_500.gif">
+  <img src="./resources/tumblr_mychsjHj6g1s7rwv1o1_400.webp">
+  <img src="./resources/giphy-2106489997.gif">
+  <img src="./resources/254906_3c3d0-1187985425.gif">
+  <img src="./resources/cover_fish-1212029713.png">
+  <img src="./resources/iridescent-3862268691 (1).jpg">
+  <img src="./resources/jewel-beetle-green-leaf_40836-1964-3400200960.jpg">
+  <img src="./resources/tumblr_mw66ypwhDp1rnet9uo6_250-1831546166.gif">
+  <img src="./resources/1fb803224d448ea084a600661050a9a5-2436569855.jpg">
+  <a href="writing.html" target="_blank"><img src="./resources/glitter-butterfly.gif"></a>
+</div>
+</div>
+</div>
+
+<div id="popup" class="popup">
+  <button class="close-btn" id="closeBtn">&times;</button>
+  <p id="popupText">This is the default message.</p>
+</div>
+
+<script>
+  // Get the elements
+  const images = document.querySelectorAll('.clickImage');  // Select all images with the 'clickImage' class
+  const popup = document.getElementById('popup');
+  const closeBtn = document.getElementById('closeBtn');
+  const popupText = document.getElementById('popupText');
+
+  // Function to open the popup and display the correct message
+  images.forEach(image => {
+      image.onclick = function() {
+          const message = image.getAttribute('data-message');  // Get the message from the clicked image's data attribute
+          popupText.textContent = message;  // Update the popup text
+          popup.style.display = 'block';  // Show the popup
+      };
+  });
+
+  // Function to close the popup when the close button is clicked
+  closeBtn.onclick = function() {
+      popup.style.display = 'none';
+  }
+
+  // Optionally, close the popup if the user clicks outside the popup window
+  window.onclick = function(event) {
+      if (event.target === popup) {
+          popup.style.display = 'none';
+      }
+  }
+</script>
+
+<script>
+  // <![CDATA[
+var colour="pink";
+var sparkles=25;
+
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (x!=ox || y!=oy) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      starx[i]+=(i%5-2)/5;
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tinyx[i]+=(i%5-2)/5;
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  set_scroll();
+  y=(e)?e.pageY:event.y+sdown;
+  x=(e)?e.pageX:event.x+sleft;
+}
+
+function set_scroll() {
+  if (typeof(self.pageYOffset)=="number") {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body.scrollTop || document.body.scrollLeft) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+	sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  if (typeof(self.innerWidth)=="number") {
+    swide=self.innerWidth;
+    shigh=self.innerHeight;
+  }
+  else if (document.documentElement && document.documentElement.clientWidth) {
+    swide=document.documentElement.clientWidth;
+    shigh=document.documentElement.clientHeight;
+  }
+  else if (document.body.clientWidth) {
+    swide=document.body.clientWidth;
+    shigh=document.body.clientHeight;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  div.style.backgroundColor=colour;
+  return (div);
+}
+// ]]>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    background-image: url(./anachdruk28background.gif);
+}
+
+.glowing {
+    text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 30px #007be6, 0 0 40px #001be6, 0 0 50px #001fe6, 0 0 60px #00e6cf, 0 0 70px #00e6cb;
+    font-weight: bold;
+}
+
+.linear-text-gradient {
+    background: linear-gradient(to right, rgb(0, 148, 64), rgb(217, 0, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+p {
+    font-size: 24px;
+    margin: 60px auto;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+img {
+    max-width: 300px;
+    margin: auto;
+}
+
+.filter-text {
+    font-weight: bold;
+    color: rgb(0, 148, 64); /* Pink color */
+    transition: filter 0.3s ease-in; /* Smooth transition for filter */
+    text-shadow: 0 0 10px #007be6, 0 0 10px #001be6, 0 0 20px #001fe6, 0 0 30px #00e6cf, 0 0 40px #00e6cb;
+}
+
+/* Style when the filter is applied */
+.filter-text.active {
+    filter: blur(5px) ;
+}
+
+@media (max-width: 768px) {
+    p {
+        width: 90%;
+        font-size: 16px;
+    }
+  }

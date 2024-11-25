@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shiny bug, glowing fish</title>
+    <link rel="stylesheet" href="./resources/writing.css">
+</head>
+<body>
+    <p>
+        <span class="glowing linear-text-gradient">a girl is a shiny bug, a girl is a glowing fish</span>
+<br><br>
+As a child, I was enamored with bugs, particularly shiny, iridescent ones like beetles. I loved to collect them and look at them with my National Geographic microscope kit that we got from Target. Peering through the lens, I was taken away by what I could see; witnessing a layer of life unavailable to me without this tool. It felt like a secret world. 
+<br><br>
+Bugs were my first love, my second was the ocean. In the fourth grade I decided I wanted to be an underwater archaeologist. I would sit at our family desktop computer for hours and create PowerPoints, compiling information on bioluminescence and buoyancy to share with my family. I loved the deep sea especially. Along with my PowerPoints, I would run laps around my block, and religiously play Endless Ocean on the Wii to prepare for my career as an underwater archaeologist. 
+<br><br>
+<img src="./resources/IMG_1558.png">
+<br><br>
+I remember the wave of anxiety-excitement I would experience in my stomach as my pixelated avatar dived deeper and deeper into the abyss within the game. Inside the deepsea trench, my avatar was met by oarfish, goblin sharks, and giant siphonophore. I was fixated by these alien creatures on Earth, and what felt like another secret world I was excited to be in as an adult. 
+<br><br>
+<img src="./resources/latest-3541002168">
+<br><br>
+My life outside of bugs and sea creatures was one of hyperfemininity. I would roll my pink plastic poodle backpack down the halls of <span class="filter-text">Parkside Elementary School</span> and write with pink glittery pens with poofs on the end. Around this time, I got my first cell phone. It was a flip phone, and considering my girlishness one would expect that I would have a pink case with charms. But I chose a plush, bright red lobster case. My acts of capturing bugs and obsessing over ocean life were never contradictory to my hyper-femininity. In fact, I think they have a lot in common, and I’ve always associated them together.  
+<br><br>
+<img src="./resources/butterfly.jpg">
+<br><br>
+I wasn’t just interested in bugs and sea creatures purely because they were unique or otherworldly; there was a resonance in their forms. I felt connected to the iridescent, glittering surfaces of beetles and bioluminescent fish. I see now that they were camouflage artists like me, their sparkling exteriors both arresting and protective, allowing them to blend in, deceive, and survive.
+<br><br>
+<img src="./resources/IMG_9446.png">
+<br><br>
+I’ve been considering how sparkly and shiny exteriors helped me survive, too. I could perform the role that others expected of me and maintain a level of expression within it, even as I repressed parts of myself I was realizing were not easily contained—<span class="filter-text">
+ parts that were queerer, messier, harder to reconcile with my small world of conservative Indiana, surrounded by peers in school with more money and more stability.</span>
+<br><br>
+I often still feel like this. Day-to-day <span class="filter-text">
+I easily identify with my self-diagnosed failure of womanhood and femininity, layered beyond just queerness.</span> Femininity still offers me a form of respite, a kind of temporary normalcy where I can still express myself,<span class="filter-text"> especially in professional spaces, academia, or among conservative family members who would disapprove or judge me, who would not understand my complexities.</span> 
+<br><br>
+
+I find it funny writing this on my laptop as my background is a field of glowing jellyfish, and I’m thinking about the pair of iridescent freshwater pearl earrings featuring a hand-painted beetle I purchased a couple months ago. I feel like my 10-year-old self; I’m still putting bioluminescent sea creatures on my computer and collecting bugs, finding solace in what they hide behind their glittering and iridescent forms. 
+<br><br>
+<img src="./resources/desktop.png">
+<br><br>
+    </p>      
+    <script>
+// Select all elements with the class .filter-text
+const filterElements = document.querySelectorAll('.filter-text');
+
+// Set up the Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        // If the element is in view, add the 'active' class
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            // If the element is out of view, remove the 'active' class
+            entry.target.classList.remove('active');
+        }
+    });
+}, {
+    threshold: 0.5 // The element must be 50% visible before triggering
+});
+
+// Observe each element
+filterElements.forEach(element => {
+    observer.observe(element);
+});
+
+
+    </script>
+</body>
+</html>
